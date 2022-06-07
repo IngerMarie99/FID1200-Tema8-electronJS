@@ -6,6 +6,8 @@ let d = new Date();
 let day = d.getDay();
 let ndate = d.toLocaleString();
 
+
+//Dette er for å vise riktig dag på tallet. Siden 0 er søndag og ikke mandag gjorde jeg dette
 switch (day){
     case 0:
         day = "Søndag";

@@ -9,6 +9,7 @@ export async function getEvents() {
 
     console.log(events)
 
+    //Dette er slideren med arrangmenter tatt fra Ticketmaster på Arrangement siden
     events.forEach(event => {
         const eventCard = document.createElement('div');
         eventCard.classList.add('card_event');

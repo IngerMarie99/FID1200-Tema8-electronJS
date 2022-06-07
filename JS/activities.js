@@ -1,4 +1,4 @@
-
+//Dette er en array jeg har laget selv, med ekte data
 export const activities = [
     {
         category: 'Restaurant',
@@ -131,6 +131,8 @@ export const activities = [
     },
 ]
 
+
+//Dette gjør at arrayen blir kategorisert etter type aktivitet
 const actionCategory = activities.filter(activity => {
     return activity.category === 'Action';
 });
@@ -147,14 +149,14 @@ const foodCategory = activities.filter(activity => {
     return activity.category === 'Restaurant';
 });
 
-
+//Her ligger koden til alle aktivitetene på Attraksjoner-siden
 export function getActivities() {
 
     const activitiesActionCard = document.getElementById("action");
 
     actionCategory.forEach(activity => {
         const activityCard = document.createElement('div');
-        activityCard.classList.add('card_action');
+        activityCard.classList.add('card_action'); //Her har jeg laget 4 forskjellige classes for å endre farge på containerene etter hvilken type aktivitet det er
         const activityCover = document.createElement('img');
         activityCover.setAttribute('src', activity.url);
         activityCard.append(activityCover);

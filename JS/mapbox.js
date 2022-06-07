@@ -1,3 +1,4 @@
+//Her inne ligger alt som har med kartet å gjøre. Både bysykler, geolocation og Fly
 export async function getMap() {
 
     const stations = await getStations();
@@ -54,6 +55,7 @@ export async function getMap() {
                 item.classList.remove('marker_active');
             })
 
+            // Her ligger funksjonen som gjør at du sentrerer på din egen posisjon hvis du trykker på pila i hjørnet
             map.flyTo({
                 center: [
                     station.geometry.coordinates[0],
